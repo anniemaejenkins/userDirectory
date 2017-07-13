@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>Robots</h1>
+    <h1>Index</h1>
 
     {{#users}}
       <div class="robotSelection">
         <!-- can click on robot pic -->
-        <a href="/{{id}}"><img src="{{avatar}}" alt=""></a>
+        <a href="/index/{{id}}"><img src="{{avatar}}" alt=""></a>
         <h2>{{name}}</h2>
         <p>{{job}} {{company}}</p>
         <!-- if there isn't a company -->
-        <p>{{^company}}Available for hire{{/company}}</p>
+        {{^company}}<p class="orange">Available for hire</p>{{/company}}
       </div>
     <!-- <table>
         <tr>{{name}}</tr>

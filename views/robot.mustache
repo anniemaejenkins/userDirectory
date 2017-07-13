@@ -3,15 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="../main.css">
   </head>
   <body>
 
 
     <div class="robotDetail">
+
+      <img src="{{avatar}}" alt="">
+      <!-- USE DOT NOTATION TO GO INTO OBJECT!! -->
       <h1>{{name}}</h1>
-      <h3>{{address}}</h3>
+      <h3>{{address.city}}, {{address.country}}</h3>
+      <p>{{#job}}
+            {{.}},
+            {{company}}
+          {{/job}}
+          {{^job}}
+          <p class="orange">Available for Hire</p>
+          {{/job}}
+      </p>
+      <p>{{email}} | {{phone}}</p>
+      <p>Education: {{university}}</p>
+      <p>Skills: {{#skills}}
+        {{.}}
+        {{/skills}}
+      </p>
+
 
     </div>
+
 
 
 
