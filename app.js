@@ -18,4 +18,4 @@ app.get('/:id', (req, res) => {
   // console.log("hello");
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
