@@ -5,12 +5,22 @@
     <title></title>
   </head>
   <body>
-    <h1>Index</h1>
-    <table>
-      {{#data}}
+    <h1>Robots</h1>
+
+    {{#users}}
+      <div class="robotSelection">
+        <!-- can click on robot pic -->
+        <a href="/{{id}}"><img src="{{avatar}}" alt=""></a>
+        <h2>{{name}}</h2>
+        <p>{{job}} {{company}}</p>
+        <!-- if there isn't a company -->
+        <p>{{^company}}Available for hire{{/company}}</p>
+      </div>
+    <!-- <table>
         <tr>{{name}}</tr>
         <tr>{{job}}</tr>
-      {{/data}}
-    </table>
+    </table> -->
+    {{/users}}
+
   </body>
 </html>
